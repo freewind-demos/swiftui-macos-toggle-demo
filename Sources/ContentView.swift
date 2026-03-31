@@ -17,19 +17,19 @@ struct ContentView: View {
             }
 
             Section("自定义标签") {
-                Toggle {
+                Toggle(isOn: $isOn1) {
                     HStack {
                         Image(systemName: "bell.fill")
                         Text("消息通知")
                     }
-                } isOn: $isOn1
+                }
 
-                Toggle {
+                Toggle(isOn: $isOn2) {
                     HStack {
                         Image(systemName: "moon.fill")
                         Text("夜间模式")
                     }
-                } isOn: $isOn2
+                }
             }
 
             Section("开关样式") {
